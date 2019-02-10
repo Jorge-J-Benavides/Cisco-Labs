@@ -1,0 +1,27 @@
+﻿Scenario:
+"For this lab I used GNS3VM along with Cisco IOSvL2 images"
+For this lab you need REAL hardware. You can’t use switches in GNS3!
+You only need layer 2 switches for this lab. The Cisco Catalyst 2950 or higher will work.
+The school you work for has a flat network design and they only use layer 2 switches. One of the teachers built the network in his own time but he has no clue what he exactly did. There is only one VLAN and there have been issues with applications that generate too much broadcast traffic. It’s up to you to segment the network and implement some VLANs.
+Goal:
+Create the following VLANs and configure the correct names:
+VLAN 10: name Engineering.
+VLAN 20: name Marketing.
+VLAN 30: name Research.
+VLAN 40: name Sales.
+VLAN 50: name Management.
+Configure fa0/1 on SW1 as an access interface in VLAN 10.
+Configure fa0/2 on SW2 as an access interface in VLAN 20.
+One of the links between SW1 and SW2 should use ISL encapsulation.
+One of the links between SW2 and SW3 is not allowed to dynamically negotiate a trunking protocol.
+One of the links between SW1 and SW3 should never send any DTP messages.
+Only VLAN 1,10 and VLAN 20 are allowed between SW1 and SW2.
+Only VLAN 1,10,20,40 and 50 are allowed between SW2 and SW3.
+The native VLAN between SW1 and SW3 should be VLAN 50 on both links.
+It took me 1000s of hours reading books and doing labs, making mistakes over and over again until I mastered all the switch protocols for CCNP.
+Would you like to be a master of switching too? In a short time without having to read 900 page books or google the answers to your questions and browsing through forums?
+I collected all my knowledge and created a single ebook for you that has everything you need to know to become a master of switching.
+You will learn all the secrets about VLANs, trunks and more.
+Does this sound interesting to you? Take a look here and let me show you how to Master CCNP SWITCH
+IOS:
+Basic IOS for the switches should be sufficient. No special features needed.
