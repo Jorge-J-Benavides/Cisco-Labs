@@ -1,0 +1,15 @@
+SW1
+!Make sure it is the Root Bridge
+spanning-tree mode rapid-pvstp
+spanning-tree loopguard default 
+
+SW2
+spanning-tree mode rapid-pvstp
+spanning-tree loopguard default 
+!enable spanning-tree bpdufilter enable on gi 0/2 to cause loop
+
+SW3
+spanning-tree mode rapid-pvstp
+spanning-tree loopguard default 
+
+
