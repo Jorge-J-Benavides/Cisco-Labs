@@ -1,0 +1,5 @@
+SW1
+int gi 0/0
+spanning-tree bpdufilter enable
+
+!the switches will both be root bridge since bpdufilter doesn't allow them to communicate
