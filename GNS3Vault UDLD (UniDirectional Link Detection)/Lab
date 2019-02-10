@@ -1,0 +1,15 @@
+﻿Scenario:
+"I Used gns3 vm and vm images"
+For this lab you need REAL hardware. You can’t use switches in GNS3!
+You need at least Catalyst 2950 switches for this lab.
+Fiber ‘r’ us is specialized in fiber solutions for layer 2 switches. They are concerned that layer 2 loops might occur when the transmit or receive connectors of their fiber links get disconnected. You want to implement a feature that will prevent a loop in case this happens. You don’t want to use a spanning tree solution so there’s something else you’ll have to configure…
+Goal:
+Configure UDLD on interface fa0/16 of both switches, use aggressive mode.
+Configure a MAC filter on SW2 that filters MAC address 0100.0ccc.cccc to simulate a link failure.
+It took me 1000s of hours reading books and doing labs, making mistakes over and over again until I mastered all the switch protocols for CCNP.
+Would you like to be a master of switching too? In a short time without having to read 900 page books or google the answers to your questions and browsing through forums?
+I collected all my knowledge and created a single ebook for you that has everything you need to know to become a master of switching.
+You will learn all the secrets about UDLD, spanning-tree, loop prevention on switches and more.
+Does this sound interesting to you? Take a look here and let me show you how to Master CCNP SWITCH
+IOS:
+Basic IOS for the switches should be sufficient. No special features needed.
