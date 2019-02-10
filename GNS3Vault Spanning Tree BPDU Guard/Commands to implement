@@ -1,0 +1,13 @@
+SW1
+int gi 0/0
+spanning-tree bpduguard enable
+errdisable recovery cause bpduguard
+
+
+
+R1
+
+
+SW2
+!Unplug R1 and plug in SW2 and ot will go into error disable mode
+
