@@ -1,0 +1,46 @@
+DNS1
+int gi 0/0
+ip address 192.168.10.1 255.255.255.0
+no shut
+
+ip route 0.0.0.0 0.0.0.0 gi 0/0
+
+DNS2
+int gi 0/0
+ip address 192.168.10.2 255.255.255.0
+no shut
+
+ip route 0.0.0.0 0.0.0.0 gi 0/0
+
+WWW1
+int gi 0/0
+ip address 192.168.20.3 255.255.255.0
+no shut
+
+ip route 0.0.0.0 0.0.0.0 gi 0/0
+
+SW1
+
+vlan 10
+vlan 20
+
+int gi0/1
+switchport mode access
+switchport access vlan 10
+
+int gi0/2
+switchport mode access
+switchport access vlan 10
+
+int gi0/3
+switchport mode access
+switchport access vlan 10
+
+ip routing
+
+int vlan 10
+ip address 192.168.10.100 255.255.255.0
+
+int vlan 20
+ip address 192.168.20.100 255.255.255.0
+
