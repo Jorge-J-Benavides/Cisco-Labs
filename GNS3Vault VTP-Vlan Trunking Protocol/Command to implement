@@ -1,0 +1,39 @@
+
+Switch Bobcat
+interface GigabitEthernet0/0
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ VTP mode server
+ VTP domain GNS3Vault
+ VTP password Vault
+ VTP prunning
+##############################################################################
+Switch Tiger
+interface GigabitEthernet0/0
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+
+interface GigabitEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ VTP mode transparent
+ VTP domain GNS3Vault
+ VTP password Vault
+ VTP prunning
+############################################################################## 
+Switch Panther
+interface GigabitEthernet0/0
+ switchport trunk allowed vlan 99
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ VTP mode client
+ VTP domain GNS3Vault
+ VTP password Vault
+ VTP prunning
