@@ -1,0 +1,333 @@
+{
+    "auto_close": true,
+    "auto_open": false,
+    "auto_start": false,
+    "grid_size": 75,
+    "name": "GNS3 VACL (VLAN Access List) GNS3 Files",
+    "project_id": "1db15c35-ba59-4001-8a4a-df477cf138d4",
+    "revision": 8,
+    "scene_height": 1000,
+    "scene_width": 2000,
+    "show_grid": false,
+    "show_interface_labels": true,
+    "show_layers": false,
+    "snap_to_grid": false,
+    "supplier": null,
+    "topology": {
+        "computes": [],
+        "drawings": [
+            {
+                "drawing_id": "c22f635c-3c65-47c5-a312-66a5d8eb0ffe",
+                "rotation": 0,
+                "svg": "<svg height=\"39\" width=\"322\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">VACL (VLAN Access List)</text></svg>",
+                "x": -283,
+                "y": -312,
+                "z": 1
+            },
+            {
+                "drawing_id": "a35d7848-1ead-4791-905d-f9386cf1c753",
+                "rotation": 0,
+                "svg": "<svg height=\"409\" width=\"246\"><rect fill=\"#aaffff\" fill-opacity=\"1.0\" height=\"409\" stroke=\"#000000\" stroke-width=\"2\" width=\"246\" /></svg>",
+                "x": -247,
+                "y": -222,
+                "z": -1
+            },
+            {
+                "drawing_id": "da00d13d-5a3c-436e-b7de-c0d5e492d092",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"62\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">VLAN 10</text></svg>",
+                "x": -153,
+                "y": -200,
+                "z": 1
+            },
+            {
+                "drawing_id": "cf904963-a8f5-4070-a5c0-1e54a044a3ac",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"120\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.168.10.0 /24</text></svg>",
+                "x": -223,
+                "y": -18,
+                "z": 1
+            },
+            {
+                "drawing_id": "25b65f95-8804-4bd2-af6b-075136517503",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
+                "x": -110,
+                "y": -109,
+                "z": 1
+            },
+            {
+                "drawing_id": "4392abe3-dd48-47e0-8cce-80455141b2f0",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
+                "x": -117,
+                "y": 38,
+                "z": 1
+            },
+            {
+                "drawing_id": "a28b2aac-de3d-4666-9367-06be16c5eeb0",
+                "rotation": 0,
+                "svg": "<svg height=\"264\" width=\"246\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">DNS1:\t192.168.10.1\nDNS2:\t192.168.10.2\n\nConfigure SW1 VACL so DNS1 cannot\nping DNS2\n\nip access-list extended NOICMP\n permit icmp any any\n\nvlan access-map BLOCKICMP 10\n match ip address NOICMP\n action drop\nvlan access-map BLOCKICMP 20\n action forward\n\nvlan filter BLOCKICMP vlan-list 1</text></svg>",
+                "x": -623,
+                "y": -231,
+                "z": 1
+            }
+        ],
+        "links": [
+            {
+                "filters": {},
+                "link_id": "7e2a5426-b4ee-47b2-ab4e-1a17a6b756c3",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "Gi0/0",
+                            "x": 36,
+                            "y": 43
+                        },
+                        "node_id": "50cd2852-85f9-448a-b777-d79fdd771959",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "Gi0/0",
+                            "x": -49,
+                            "y": 4
+                        },
+                        "node_id": "4b10c393-e8a8-49de-afec-0ccde181a526",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "edd572bc-37ca-4283-a414-07e04b24df1a",
+                "nodes": [
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "Gi0/1",
+                            "x": 67,
+                            "y": 2
+                        },
+                        "node_id": "cf983ca7-3e7b-41d5-96c8-311b3d37ef82",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "Gi0/1",
+                            "x": -48,
+                            "y": 22
+                        },
+                        "node_id": "4b10c393-e8a8-49de-afec-0ccde181a526",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            }
+        ],
+        "nodes": [
+            {
+                "compute_id": "vm",
+                "console": 5000,
+                "console_type": "telnet",
+                "first_port_name": "",
+                "height": 48,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "SW1",
+                    "x": 11,
+                    "y": -24
+                },
+                "name": "SW1",
+                "node_id": "4b10c393-e8a8-49de-afec-0ccde181a526",
+                "node_type": "qemu",
+                "port_name_format": "Gi{1}/{0}",
+                "port_segment_size": 4,
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "e1000",
+                    "adapters": 16,
+                    "bios_image": "",
+                    "bios_image_md5sum": null,
+                    "boot_priority": "c",
+                    "cdrom_image": "",
+                    "cdrom_image_md5sum": null,
+                    "cpu_throttling": 0,
+                    "cpus": 1,
+                    "hda_disk_image": "vios_l2-adventerprisek9-m.03.2017.qcow2",
+                    "hda_disk_image_md5sum": "8f14b50083a14688dec2fc791706bb3e",
+                    "hda_disk_interface": "virtio",
+                    "hdb_disk_image": "",
+                    "hdb_disk_image_md5sum": null,
+                    "hdb_disk_interface": "ide",
+                    "hdc_disk_image": "",
+                    "hdc_disk_image_md5sum": null,
+                    "hdc_disk_interface": "ide",
+                    "hdd_disk_image": "",
+                    "hdd_disk_image_md5sum": null,
+                    "hdd_disk_interface": "ide",
+                    "initrd": "",
+                    "initrd_md5sum": null,
+                    "kernel_command_line": "",
+                    "kernel_image": "",
+                    "kernel_image_md5sum": null,
+                    "legacy_networking": false,
+                    "linked_clone": true,
+                    "mac_address": "0c:38:d4:a5:26:00",
+                    "options": "-nographic",
+                    "platform": "x86_64",
+                    "process_priority": "normal",
+                    "qemu_path": "/usr/bin/qemu-system-x86_64",
+                    "ram": 768,
+                    "usage": "There is no default password and enable password. There is no default configuration present."
+                },
+                "symbol": ":/symbols/multilayer_switch.svg",
+                "width": 51,
+                "x": -13,
+                "y": -40,
+                "z": 0
+            },
+            {
+                "compute_id": "vm",
+                "console": 5002,
+                "console_type": "telnet",
+                "first_port_name": "",
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "DNS1",
+                    "x": 12,
+                    "y": -25
+                },
+                "name": "DNS1",
+                "node_id": "50cd2852-85f9-448a-b777-d79fdd771959",
+                "node_type": "qemu",
+                "port_name_format": "Gi0/{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "e1000",
+                    "adapters": 4,
+                    "bios_image": "",
+                    "bios_image_md5sum": null,
+                    "boot_priority": "c",
+                    "cdrom_image": "",
+                    "cdrom_image_md5sum": null,
+                    "cpu_throttling": 0,
+                    "cpus": 1,
+                    "hda_disk_image": "vios-adventerprisek9-m.vmdk.SPA.156-2.T",
+                    "hda_disk_image_md5sum": "83707e3cc93646da58ee6563a68002b5",
+                    "hda_disk_interface": "virtio",
+                    "hdb_disk_image": "IOSv_startup_config.img",
+                    "hdb_disk_image_md5sum": "bc605651c4688276f81fd59dcf5cc786",
+                    "hdb_disk_interface": "virtio",
+                    "hdc_disk_image": "",
+                    "hdc_disk_image_md5sum": null,
+                    "hdc_disk_interface": "ide",
+                    "hdd_disk_image": "",
+                    "hdd_disk_image_md5sum": null,
+                    "hdd_disk_interface": "ide",
+                    "initrd": "",
+                    "initrd_md5sum": null,
+                    "kernel_command_line": "",
+                    "kernel_image": "",
+                    "kernel_image_md5sum": null,
+                    "legacy_networking": false,
+                    "linked_clone": true,
+                    "mac_address": "0c:38:d4:19:59:00",
+                    "options": "-nographic",
+                    "platform": "x86_64",
+                    "process_priority": "normal",
+                    "qemu_path": "/usr/bin/qemu-system-x86_64",
+                    "ram": 512,
+                    "usage": "There is no default password and enable password. There is no default configuration present."
+                },
+                "symbol": ":/symbols/router.svg",
+                "width": 66,
+                "x": -181,
+                "y": -124,
+                "z": 0
+            },
+            {
+                "compute_id": "vm",
+                "console": 5004,
+                "console_type": "telnet",
+                "first_port_name": "",
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "DNS2",
+                    "x": 12,
+                    "y": -25
+                },
+                "name": "DNS2",
+                "node_id": "cf983ca7-3e7b-41d5-96c8-311b3d37ef82",
+                "node_type": "qemu",
+                "port_name_format": "Gi0/{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "e1000",
+                    "adapters": 4,
+                    "bios_image": "",
+                    "bios_image_md5sum": null,
+                    "boot_priority": "c",
+                    "cdrom_image": "",
+                    "cdrom_image_md5sum": null,
+                    "cpu_throttling": 0,
+                    "cpus": 1,
+                    "hda_disk_image": "vios-adventerprisek9-m.vmdk.SPA.156-2.T",
+                    "hda_disk_image_md5sum": "83707e3cc93646da58ee6563a68002b5",
+                    "hda_disk_interface": "virtio",
+                    "hdb_disk_image": "IOSv_startup_config.img",
+                    "hdb_disk_image_md5sum": "bc605651c4688276f81fd59dcf5cc786",
+                    "hdb_disk_interface": "virtio",
+                    "hdc_disk_image": "",
+                    "hdc_disk_image_md5sum": null,
+                    "hdc_disk_interface": "ide",
+                    "hdd_disk_image": "",
+                    "hdd_disk_image_md5sum": null,
+                    "hdd_disk_interface": "ide",
+                    "initrd": "",
+                    "initrd_md5sum": null,
+                    "kernel_command_line": "",
+                    "kernel_image": "",
+                    "kernel_image_md5sum": null,
+                    "legacy_networking": false,
+                    "linked_clone": true,
+                    "mac_address": "0c:38:d4:ef:82:00",
+                    "options": "-nographic",
+                    "platform": "x86_64",
+                    "process_priority": "normal",
+                    "qemu_path": "/usr/bin/qemu-system-x86_64",
+                    "ram": 512,
+                    "usage": "There is no default password and enable password. There is no default configuration present."
+                },
+                "symbol": ":/symbols/router.svg",
+                "width": 66,
+                "x": -180,
+                "y": 72,
+                "z": 0
+            }
+        ]
+    },
+    "type": "topology",
+    "variables": null,
+    "version": "2.1.12",
+    "zoom": 100
+}

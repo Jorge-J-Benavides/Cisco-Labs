@@ -1,0 +1,31 @@
+DNS1
+
+hostname DNS1
+
+int gi 0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+####################################################
+DNS2
+
+hostname DNS2
+
+int gi 0/1
+ip address 192.168.10.2 255.255.255.0
+no shutdown
+####################################################
+SW1
+
+hostname SW1
+
+ip access-list extended NOICMP
+ permit icmp any any
+
+vlan access-map BLOCKICMP 10
+ match ip address NOICMP
+ action drop
+vlan access-map BLOCKICMP 20
+ action forward
+
+vlan filter BLOCKICMP vlan-list 1
+
