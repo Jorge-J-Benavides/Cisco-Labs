@@ -1,0 +1,10 @@
+SW1
+Make sure it is the Root Bridge
+
+SW2
+int range gi 0/2 -3
+spanning-tree guard root
+
+SW3
+spanning-tree vlan 1 priority 4096
+
