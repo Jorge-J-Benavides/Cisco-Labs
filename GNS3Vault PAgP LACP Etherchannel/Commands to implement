@@ -1,0 +1,27 @@
+SW1
+
+int range gi 0/0 -1
+channel group 12 mode desirable
+
+int range gi 0/2 -3
+channel group 13 mode active
+
+port-channel load-balance dst-mac
+
+SW2
+
+int range gi 0/0 -1
+channel group 12 mode auto
+
+int range gi 1/0 -1
+channel-group 23 mode on
+
+port-channel load-balance dst-mac
+
+SW3
+
+int range gi 0/2 -3
+channel group 13 mode passive
+
+int range gi 1/0 -1
+channel-group 23 mode on
