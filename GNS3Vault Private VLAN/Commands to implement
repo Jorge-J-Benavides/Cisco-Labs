@@ -1,0 +1,56 @@
+SW1
+
+vtp mode transparent
+
+vlan 501
+priavte-vlan community
+
+vlan 502
+private-vlan isolated 
+
+vlan 500
+private-vlan primary
+private-vlan asscoiation add 501
+private-vlan asscoiation add 501
+
+int range gi 0/0 -1
+switchport mode private-vlan host
+switchport private-vlan host-association 500 501
+
+int range gi 0/2 -3
+switchport mode private-vlan host
+switchport private-vlan host-association 500 502
+
+int gi 1/0
+switchport private-vlan mapping 500 501-502
+switchport mode private-vlan promiscuous
+#####################################################
+Gateway
+
+int gi 0/0
+ip address 192.168.1.254 255.255.255.0
+no shut
+#####################################################
+DNS1
+
+int gi 0/0
+ip address 192.168.1.1 255.255.255.0
+no shut
+#####################################################
+DNS2
+
+int gi 0/2
+ip address 192.168.1.2 255.255.255.0
+no shut
+#####################################################
+WWW1
+
+int gi 0/3
+ip address 192.168.1.3 255.255.255.0
+no shut
+#####################################################
+WWW2
+
+int gi 0/2
+ip address 192.168.1.4 255.255.255.0
+no shut
