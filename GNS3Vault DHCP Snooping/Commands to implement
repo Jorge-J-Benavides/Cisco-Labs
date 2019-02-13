@@ -1,0 +1,46 @@
+DHCPServer
+
+int gi 0/1
+ip add 192.168.123.254 255.255.255.0
+no shut
+
+ip dhcp pool DHCPServer
+network 192.168.123.0 255.255.255.0
+default-router 192.168.123.254
+lease 5
+
+ip dhcp excluded-address 192.168.123.254
+
+######################################################
+Client
+
+int gi 0/0
+ip address dhcp
+no shut
+
+######################################################
+SW1
+
+ip dhcp snooping
+ip dhcp snooping vlan 1
+no ip dhcp snooping opition 82
+
+int gi 0/1
+ip dhcp snooping trust
+
+int gi 0/0
+ip dhcp snooping limit rate 10
+
+######################################################
+Attacker
+
+int gi 0/2
+ip add 192.168.123.253 255.255.255.0
+no shut
+
+ip dhcp pool DHCPAttacker
+network 192.168.123.0 255.255.255.0
+default-router 192.168.123.253
+lease 5
+
+ip dhcp excluded-address 192.168.123.253
