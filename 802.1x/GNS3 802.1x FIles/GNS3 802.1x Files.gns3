@@ -20,16 +20,8 @@
                 "drawing_id": "4c533992-1458-45a6-aff9-1d880765bfe0",
                 "rotation": 0,
                 "svg": "<svg height=\"24\" width=\"104\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">172.16.1.0 /24</text></svg>",
-                "x": -132,
-                "y": -98,
-                "z": 1
-            },
-            {
-                "drawing_id": "8eb013ac-70fe-4333-9305-722a59c017f7",
-                "rotation": 0,
-                "svg": "<svg height=\"24\" width=\"112\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.168.1.0 /24</text></svg>",
-                "x": -302,
-                "y": -150,
+                "x": -285,
+                "y": -132,
                 "z": 1
             },
             {
@@ -54,6 +46,22 @@
                 "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
                 "x": 83,
                 "y": -66,
+                "z": 1
+            },
+            {
+                "drawing_id": "c3d38451-9a0e-4562-8748-97ee6b5363ab",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"220\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">VMWare Workstation on local PC</text></svg>",
+                "x": -616,
+                "y": -129,
+                "z": 1
+            },
+            {
+                "drawing_id": "98038a7b-ee41-42d0-a9cd-d0563ab4820e",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"184\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">VMWare Server on local PC</text></svg>",
+                "x": 21,
+                "y": -138,
                 "z": 1
             }
         ],
@@ -205,11 +213,6 @@
                 "properties": {
                     "interfaces": [
                         {
-                            "name": "docker0",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
                             "name": "eth0",
                             "special": false,
                             "type": "ethernet"
@@ -227,11 +230,6 @@
                         {
                             "name": "qemu0",
                             "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "virbr0",
-                            "special": true,
                             "type": "ethernet"
                         }
                     ],
@@ -283,11 +281,6 @@
                 "properties": {
                     "interfaces": [
                         {
-                            "name": "docker0",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
                             "name": "eth0",
                             "special": false,
                             "type": "ethernet"
@@ -305,11 +298,6 @@
                         {
                             "name": "qemu0",
                             "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "virbr0",
-                            "special": true,
                             "type": "ethernet"
                         }
                     ],
