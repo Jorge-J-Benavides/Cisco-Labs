@@ -1,0 +1,9 @@
+For this lab I used 
+GNS3 VM
+VM Server 2016, AD, NPS, DNS
+VM Workstation
+
+The goal of the lab was to implent 802.1x on the cisco switch, server, and workstation.
+
+First get network connectivity between all the virtual machine sthrough gns. Then implement 802.1x.
+

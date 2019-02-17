@@ -1,0 +1,32 @@
+Server 2016
+
+DNS
+AD
+AD group
+AD user
+NPS
+
+
+Workstation
+
+Wired service on 
+Network interfac configs
+
+SW1
+
+aaa new-model
+
+aaa authentication dot1x default group radius
+aaa authorization network default group radius
+aaa accounting dot1x default start-stop group radius
+
+dot1x system-auth-control
+
+radius server CiscoSkills
+ address ipv4 172.16.1.2 auth-port 1812 acct-port 1813
+ key cisco
+
+int gi 0/0
+authentication host-mode multi-auth
+authentication port-control auto
+dot1x pae authenticator
