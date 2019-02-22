@@ -1,0 +1,35 @@
+New York
+
+int loop 0
+ip address 1.1.1.1 255.255.255.252
+no shut
+
+int gi 0/0
+ip address 192.168.1.1 255.255.255.252
+no shut
+
+int gi 0/1
+ip address 192.168.2.1 255.255.255.252
+no shut
+
+ip route 2.2.2.0 255.255.255.252 gi 0/0
+ip route 2.2.2.0 255.255.255.252 gi 0/0 100
+
+
+######################################
+
+Washington
+
+int loop 0
+ip address 2.2.2.2 255.255.255.252
+no shut
+
+int gi 0/0
+ip address 192.168.1.2 255.255.255.252
+no shut
+
+int gi 0/1
+ip address 192.168.2.2 255.255.255.252
+no shut
+
+ip route 0.0.0.0 0.0.0.0 192.168.2.1 permanent 
