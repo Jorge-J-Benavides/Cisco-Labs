@@ -1,5 +1,0 @@
-This lab is from GNS3 Vault 'gns3vault.com'
-The lab file contains the lab instructions
-The GNS3 files contains the GNS files
-I used Cisco IOSvL2 images to complete this lab
-I used Cisco IOSvL3 images to ocmplete this lab
