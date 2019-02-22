@@ -3,8 +3,8 @@
     "auto_open": false,
     "auto_start": false,
     "grid_size": 75,
-    "name": "GNS3 Static Routing Beginners Lab Files",
-    "project_id": "c7066072-05c7-4212-bb69-1746f5a7ccb2",
+    "name": "GNS3 RIP Unicast Files",
+    "project_id": "2a8e776f-bb9d-4a24-ac74-338fe34fa0a2",
     "revision": 8,
     "scene_height": 1000,
     "scene_width": 2000,
@@ -17,112 +17,89 @@
         "computes": [],
         "drawings": [
             {
-                "drawing_id": "83b104e5-4a82-49bc-ad4a-07a7029b1a61",
+                "drawing_id": "71209d0d-d9d3-4b8c-afdb-2d20e9dfa75a",
                 "rotation": 0,
-                "svg": "<svg height=\"39\" width=\"373\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">Static Routing Beginners Lab</text></svg>",
-                "x": -295,
-                "y": -435,
+                "svg": "<svg height=\"39\" width=\"154\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">RIP Unicast</text></svg>",
+                "x": -414,
+                "y": -315,
                 "z": 1
             },
             {
-                "drawing_id": "db26965e-3a37-48ee-bac9-a55f8244d3ed",
+                "drawing_id": "7264be6c-706b-4159-81dd-cb0c5fa16041",
                 "rotation": 0,
-                "svg": "<svg height=\"120\" width=\"1187\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">All IP addresses are preconfigured as shown in the topology picture.\nThere is a Loopback0 interface on the Washington router: IP Address 2.2.2.2/30.\nThere is a Loopback0 interface on the New York router: IP Address 1.1.1.1/30.\nNew York: create a static route pointing to the Loopback0 network on Washington, traffic should pass the 192.168.1.0 network.\nWashington: create a default route pointing to the Loopback0 network on New York, traffic should pass the 192.168.2.0 network. In the routing table you should see a 0.0.0.0 entry.\nNew York: create a backup static route pointing to the Loopback0 network on Washington, administrative distance should be 100.\nWashington: change the default route so it stays in the routing table even when the interface goes down.</text></svg>",
-                "x": -640,
-                "y": -391,
+                "svg": "<svg height=\"40\" width=\"708\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">Configure RIP version 2 on both routers, achieve full connectivity for all networks (including the loopbacks).\nYou are not allowed to send RIP packets by multicast or broadcast.</text></svg>",
+                "x": -718,
+                "y": -260,
                 "z": 1
             },
             {
-                "drawing_id": "be35c946-dc25-49e1-96aa-504d6848a930",
+                "drawing_id": "5f0f30e9-df2d-4cb6-a3eb-196ac9749972",
                 "rotation": 0,
-                "svg": "<svg height=\"24\" width=\"112\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.168.1.0 /30</text></svg>",
-                "x": -235,
-                "y": -120,
+                "svg": "<svg height=\"24\" width=\"120\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.168.12.0 /24</text></svg>",
+                "x": -434,
+                "y": -113,
                 "z": 1
             },
             {
-                "drawing_id": "46c0e6d8-69b2-4a2b-8b90-ae950e70b353",
+                "drawing_id": "352e7baa-de07-4598-a0d7-775afbae809f",
                 "rotation": 0,
-                "svg": "<svg height=\"24\" width=\"112\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">192.168.2.0 /30</text></svg>",
-                "x": -233,
-                "y": -63,
+                "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.1</text></svg>",
+                "x": -496,
+                "y": -85,
                 "z": 1
             },
             {
-                "drawing_id": "1e2967d8-295a-4e66-bf80-6b5a2ac5f255",
+                "drawing_id": "566f0e26-d1e0-4d67-b472-de6777582823",
                 "rotation": 0,
-                "svg": "<svg height=\"24\" width=\"99\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">L0 2.2.2.2 /30</text></svg>",
-                "x": 73,
-                "y": -94,
+                "svg": "<svg height=\"24\" width=\"20\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.2</text></svg>",
+                "x": -263,
+                "y": -81,
                 "z": 1
             },
             {
-                "drawing_id": "308a5cca-f172-4058-aa69-a9a6c41dc578",
+                "drawing_id": "f53a2eec-4010-4f72-8bd5-f12bea3cb41b",
                 "rotation": 0,
-                "svg": "<svg height=\"24\" width=\"99\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">L0 2.2.2.2 /30</text></svg>",
-                "x": -499,
-                "y": -97,
+                "svg": "<svg height=\"24\" width=\"99\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">L0 1.1.1.1 /24</text></svg>",
+                "x": -688,
+                "y": -77,
+                "z": 1
+            },
+            {
+                "drawing_id": "095b26f6-277e-44cf-947e-d6d8c9e7377d",
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"99\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">L0 2.2.2.2 /24</text></svg>",
+                "x": -158,
+                "y": -79,
                 "z": 1
             }
         ],
         "links": [
             {
                 "filters": {},
-                "link_id": "31975bf4-b62f-4578-b533-f9b75b97b170",
+                "link_id": "d627b900-1727-4b7c-865b-7e22d2ea24c2",
                 "nodes": [
                     {
-                        "adapter_number": 1,
+                        "adapter_number": 0,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "Gi0/1",
-                            "x": 94,
-                            "y": 20
+                            "text": "Gi0/0",
+                            "x": 92,
+                            "y": 21
                         },
-                        "node_id": "cdce0410-5e73-4268-8bc5-d0f73436a57a",
+                        "node_id": "70e911c2-1481-4014-a9f6-3012b2b20b68",
                         "port_number": 0
                     },
                     {
-                        "adapter_number": 1,
+                        "adapter_number": 0,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "Gi0/1",
-                            "x": -71,
+                            "text": "Gi0/0",
+                            "x": -81,
                             "y": 19
                         },
-                        "node_id": "c2c9169c-93f1-41a9-bd6d-4e4149a97ae4",
-                        "port_number": 0
-                    }
-                ],
-                "suspend": false
-            },
-            {
-                "filters": {},
-                "link_id": "a0c90702-b5ab-48d3-a57b-fe556f9119ba",
-                "nodes": [
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "Gi0/0",
-                            "x": 93,
-                            "y": -4
-                        },
-                        "node_id": "cdce0410-5e73-4268-8bc5-d0f73436a57a",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "Gi0/0",
-                            "x": -73,
-                            "y": -6
-                        },
-                        "node_id": "c2c9169c-93f1-41a9-bd6d-4e4149a97ae4",
+                        "node_id": "de2412b1-c453-4e13-ba3b-d6190dc7ef35",
                         "port_number": 0
                     }
                 ],
@@ -139,12 +116,12 @@
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "NewYork",
-                    "x": 0,
+                    "text": "Game",
+                    "x": 11,
                     "y": -25
                 },
-                "name": "NewYork",
-                "node_id": "cdce0410-5e73-4268-8bc5-d0f73436a57a",
+                "name": "Game",
+                "node_id": "70e911c2-1481-4014-a9f6-3012b2b20b68",
                 "node_type": "qemu",
                 "port_name_format": "Gi0/{0}",
                 "port_segment_size": 0,
@@ -178,7 +155,7 @@
                     "kernel_image_md5sum": null,
                     "legacy_networking": false,
                     "linked_clone": true,
-                    "mac_address": "0c:cc:b2:a5:7a:00",
+                    "mac_address": "0c:a0:a2:0b:68:00",
                     "options": "-nographic",
                     "platform": "x86_64",
                     "process_priority": "normal",
@@ -188,8 +165,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -389,
-                "y": -102,
+                "x": -576,
+                "y": -82,
                 "z": 0
             },
             {
@@ -201,12 +178,12 @@
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "Washington",
-                    "x": -9,
+                    "text": "Over",
+                    "x": 13,
                     "y": -25
                 },
-                "name": "Washington",
-                "node_id": "c2c9169c-93f1-41a9-bd6d-4e4149a97ae4",
+                "name": "Over",
+                "node_id": "de2412b1-c453-4e13-ba3b-d6190dc7ef35",
                 "node_type": "qemu",
                 "port_name_format": "Gi0/{0}",
                 "port_segment_size": 0,
@@ -240,7 +217,7 @@
                     "kernel_image_md5sum": null,
                     "legacy_networking": false,
                     "linked_clone": true,
-                    "mac_address": "0c:cc:b2:7a:e4:00",
+                    "mac_address": "0c:a0:a2:ef:35:00",
                     "options": "-nographic",
                     "platform": "x86_64",
                     "process_priority": "normal",
@@ -250,8 +227,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -18,
-                "y": -98,
+                "x": -232,
+                "y": -78,
                 "z": 0
             }
         ]

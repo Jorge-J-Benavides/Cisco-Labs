@@ -1,0 +1,34 @@
+Game
+
+int gi 0/0
+ip address 192.168.12.1 255.255.255.0
+no shut
+
+int loop 0 
+ip address 1.1.1.1 255.255.255.0 
+no shut
+
+router rip 
+version 2
+network 1.1.1.1 255.255.255.0
+passive interface loop 0
+passive interface gi 0/0
+neighbor 192.168.12.2
+
+####################################
+Over
+
+int gi 0/0
+ip address 192.168.12.2 255.255.255.0
+no shut
+
+int loop 0 
+ip address 2.2.2.2 255.255.255.0 
+no shut
+
+router rip 
+version 2
+network 2.2.2.2
+passive interface loop 0
+passive interface gi 0/0
+neighbor 192.168.12.1
