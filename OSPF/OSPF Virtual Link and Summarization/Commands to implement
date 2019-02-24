@@ -1,0 +1,95 @@
+Huey
+
+hostname Huey
+
+int gi 0/0
+ip address 192.168.12.1 255.255.255.0
+no shut
+
+int loop 0
+ip address 1.1.1.1 255.255.255.0
+no shut
+
+router ospf 1
+ router-id 1.1.1.1
+ area 1 virtual-link 2.2.2.2
+ network 1.1.1.1 0.0.0.0 area 0
+ network 192.168.12.0 0.0.0.255 area 1
+
+################################################################
+Dewey
+
+hostname Dewey
+
+int gi 0/0
+ip address 192.168.12.2 255.255.255.0
+no shut
+
+int gi 0/1
+ip address 192.168.23.1 255.255.255.0
+no shut
+
+router ospf 1
+ router-id 2.2.2.2
+ area 1 virtual-link 1.1.1.1
+ area 2 range 172.16.0.0 255.255.248.0
+ network 192.168.12.0 0.0.0.255 area 1
+ network 192.168.23.0 0.0.0.255 area 2
+
+
+######################################################### 
+Louie
+
+hostname Louie
+
+int gi 0/1
+ip address 192.168.23.2 255.255.255.0
+no shut
+
+int loop 0
+ip address 172.16.0.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 1
+ip address 172.16.1.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 2
+ip address 172.16.2.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 3
+ip address 172.16.3.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 4
+ip address 172.16.4.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+
+router ospf 1
+ router-id 3.3.3.3
+ network 172.16.0.0 0.0.0.255 area 2
+ network 172.16.1.0 0.0.0.255 area 2
+ network 172.16.2.0 0.0.0.255 area 2
+ network 172.16.3.0 0.0.0.255 area 2
+ network 172.16.4.0 0.0.0.255 area 2
+ network 192.168.23.0 0.0.0.255 area 2
+
+
+
+
+
+
+
+
+
+
+
+
+
