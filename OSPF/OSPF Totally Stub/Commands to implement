@@ -1,7 +1,7 @@
-Chicken
+Barik
 
 int loop 0
-ip address 1.1.1.1 255.255.255.0
+ip address 2.2.2.2 255.255.255.0
 ip ospf network point-to-point
 no shut
 
@@ -10,69 +10,48 @@ ip address 192.168.12.2 255.255.255.0
 no shut
 
 router ospf 1
- area 1 virtual-link 4.4.4.4
- area 1 virtual-link 3.3.3.3
+network 192.168.12.2 0.0.0.255 area 1
+network 2.2.2.0 0.0.0.255 area 1
+area 1 stub
+
+#####################################################
+Algrim
+
+int loop 0
+ip address 1.1.1.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 1
+ip address 172.16.0.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 2
+ip address 172.16.1.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 3
+ip address 172.16.2.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+int loop 4
+ip address 172.16.3.1 255.255.255.0
+ip ospf network point-to-point
+no shut
+
+router ospf 1
+ area 1 stub no-summary
  network 1.1.1.0 0.0.0.255 area 0
+ network 172.16.0.0 0.0.0.255 area 0
+ network 172.16.1.0 0.0.0.255 area 0
+ network 172.16.2.0 0.0.0.255 area 0
+ network 172.16.3.0 0.0.0.255 area 0
  network 192.168.12.0 0.0.0.255 area 1
 
-#########################################################
-Beef
 
-int loop 0
- ip address 2.2.2.2 255.255.255.0
- ip ospf network point-to-point
- no shut 
-
-interface GigabitEthernet0/0
- ip address 192.168.12.1 255.255.255.0
- no shut
-
-interface GigabitEthernet0/1
- ip address 192.168.23.1 255.255.255.0
- no shut
-
-interface GigabitEthernet0/2
- ip address 192.168.24.1 255.255.255.0
- no shut
-
-router ospf 1
- network 0.0.0.0 255.255.255.255 area 1
-
-#########################################################
-Pork
-
-int loop 0
-ip address 3.3.3.3 255.255.255.0
-ip ospf network point-to-point
-no shut
-
-int gi 0/1
-ip address 192.168.23.2 255.255.255.0
-no shut
-
-router ospf 1
- area 1 virtual-link 1.1.1.1
- area 1 virtual-link 4.4.4.4
- network 3.3.3.0 0.0.0.255 area 0
- network 192.168.23.0 0.0.0.255 area 1
-
-#########################################################
-Fish
-
-int loop 0
-ip address 4.4.4.4 255.255.255.0
-ip ospf network point-to-point
-no shut
-
-int gi 0/2
-ip address 192.168.24.2 255.255.255.0
-no shut
-
-router ospf 1
- area 1 virtual-link 1.1.1.1
- area 1 virtual-link 3.3.3.3
- network 4.4.4.0 0.0.0.255 area 2
- network 192.168.24.0 0.0.0.255 area 1
 
 
 
